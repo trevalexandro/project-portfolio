@@ -1,3 +1,5 @@
+This is my portfolio website using React, Next.js, and Tailwind CSS. See instructions for running the application below.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
