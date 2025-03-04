@@ -11,6 +11,7 @@ const NotableProjectSection = ():JSX.Element => {
     return (
         <SectionContainer sectionName="Notable Project: Portfolio Management">
             <p className='self-center'>
+            {`
                 As an Engineering Manager in a Risk Engineering organization, my team was tasked with automating the process of
                 changing credit lines of customers in the company's portfolio. The business case for this effort was to quickly
                 manage the company's risk & reduce charge-offs as much as possible. We partnered with an external consultant that
@@ -19,6 +20,7 @@ const NotableProjectSection = ():JSX.Element => {
                 to downstream systems for executing the credit line changes & reporting. We also created an internal front-end
                 application that allowed end users to conduct manual reviews on recommendations that needed further review. This
                 project reduced over $10 million in charge-offs within a year.
+            `}
             </p>
             <Image className='self-center' src={theme === 'dark' ? darkDiagram : lightDiagram} alt='Portfolio Management Architecture' />
         </SectionContainer>

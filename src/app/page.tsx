@@ -53,8 +53,8 @@ const Home = ():JSX.Element => {
           <directionalLight color="blue" position={[0, 0, 5]} />
         </Canvas>
         <div className="flex flex-col items-center justify-center w-full h-full absolute top-0">
-          <p className={BANNER_TEXT_CLASS_NAMES}>Hello, I'm Trevor</p>
-          <p className={BANNER_TEXT_CLASS_NAMES}>I'm a full-stack engineer & leader</p>
+          <p className={BANNER_TEXT_CLASS_NAMES}>{`Hello, I'm Trevor`}</p>
+          <p className={BANNER_TEXT_CLASS_NAMES}>{`I'm a full-stack engineer & leader`}</p>
           <Button className="mt-10 animate-bounce bg-white text-black hover:bg-gray-300 asChild">
             <Link href={CORE_COMPETENCIES_ID}>
               View my work
