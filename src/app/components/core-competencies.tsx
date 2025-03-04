@@ -7,20 +7,20 @@ import dataCoreCompetencies from './../../../public/Data Core Compentencies Icon
 import cloudContainerInfraCoreCompetencies from './../../../public/Cloud_Container Infrastructure Core Compentencies Icons.drawio.png';
 import otherCoreCompetencies from './../../../public/Other Core Compentencies Icons.drawio.png';
 import Image from 'next/image';
-import React from "react";
+import React, { JSX } from "react";
+import SectionContainer from "./section-container";
 
-const TEXT_SIZE_CLASS_NAMES:string = 'text-xl md:text-4xl lg:text-6xl';
 const NUM_SEPARATOR_COMPONENTS:number = 3;
 
-const getSeparatorComponents = ():React.JSX.Element[] => {
-    const separatorComponents:React.JSX.Element[] = [];
+const getSeparatorComponents = ():JSX.Element[] => {
+    const separatorComponents:JSX.Element[] = [];
     for(let i = 0; i < NUM_SEPARATOR_COMPONENTS; i++) {
         separatorComponents.push(<Separator orientation="vertical" className="invisible lg:visible mx-20" key={`separator ${i}`} />);
     }
     return separatorComponents;
 };
 
-const getAccordionComponent = ():React.JSX.Element => {
+const getAccordionComponent = ():JSX.Element => {
     const accordionItems = [
         { name: 'Backend', imageSrc: backendCoreCompetencies },
         { name: 'Front-End', imageSrc: frontEndCoreCompetencies },
@@ -50,10 +50,9 @@ const getAccordionComponent = ():React.JSX.Element => {
 };
 
 
-const CoreCompetenciesSection = ():React.JSX.Element => {
+const CoreCompetenciesSection = ():JSX.Element => {
     return (
-        <div className='flex flex-col'>
-            <p className={`${TEXT_SIZE_CLASS_NAMES} self-center mb-5`} id='coreCompetencies'>Core Competencies</p>
+        <SectionContainer sectionName="Core Competencies" id='coreCompetencies'>
             <div className='flex flex-col lg:flex-row self-center lg:items-center'> 
                 <div className="flex flex-col items-center mb-5 lg:mb-0">
                     <User size={200} />
@@ -76,7 +75,7 @@ const CoreCompetenciesSection = ():React.JSX.Element => {
                 {getSeparatorComponents()}
                 {getAccordionComponent()}
             </div>
-        </div>
+        </SectionContainer>
     );
 };
 

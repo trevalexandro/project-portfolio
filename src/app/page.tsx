@@ -4,11 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Canvas } from "@react-three/fiber";
 import { MoveDownIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import React from "react";
+import React, { JSX } from "react";
 import * as THREE from 'three';
 import Sphere from "./components/sphere";
 import CoreCompetenciesSection from "./components/core-competencies";
 import Link from "next/link";
+import NotableProjectSection from "./components/notable-project";
+import OtherKeyProjectsSection from "./components/other-key-projects";
+import { TEXT_SIZE_CLASS_NAMES } from "./components/section-container";
 
 const MIN_SPHERE_POSITION:number = -25;
 const MAX_SPHERE_POSITION:number = 25;
@@ -16,12 +19,11 @@ const SPHERE_X_AXIS:number = 1;
 const SPHERE_Y_AXIS:number = 1;
 const SPHERE_MIN_Z_AXIS:number = -1;
 const SPHERE_MAX_Z_AXIS:number = 1;
-const TEXT_SIZE_CLASS_NAMES = 'text-xl md:text-4xl lg:text-6xl';
 const BANNER_TEXT_CLASS_NAMES: string = `${TEXT_SIZE_CLASS_NAMES} text-white`;
 const CORE_COMPETENCIES_ID = '#coreCompetencies';
 
-const getBackdrop = (): React.JSX.Element[] => {
-  const backdropElements: React.JSX.Element[] = [];
+const getBackdrop = (): JSX.Element[] => {
+  const backdropElements: JSX.Element[] = [];
   for(let i = MIN_SPHERE_POSITION; i < MAX_SPHERE_POSITION; i += SPHERE_X_AXIS) {
     for (let j = MIN_SPHERE_POSITION; j < MAX_SPHERE_POSITION; j += SPHERE_Y_AXIS) {
       backdropElements.push(<Sphere key={`x${i} y${j}`} position={[i, j, THREE.MathUtils.randInt(SPHERE_MIN_Z_AXIS, SPHERE_MAX_Z_AXIS)]} />);
@@ -41,7 +43,7 @@ const getGradientBottomColor = (theme: string | undefined): string => {
   return gradientCss;
 };
 
-const Home = ():React.JSX.Element => {
+const Home = ():JSX.Element => {
   const { theme } = useTheme();
   return (
     <div>
@@ -62,6 +64,8 @@ const Home = ():React.JSX.Element => {
         </div>
       </div>
       <CoreCompetenciesSection />
+      <NotableProjectSection />
+      <OtherKeyProjectsSection />
     </div>
   );
 };
