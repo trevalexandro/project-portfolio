@@ -56,20 +56,13 @@ const CoreCompetenciesSection = ():JSX.Element => {
             <div className='flex flex-col lg:flex-row self-center lg:items-center'> 
                 <div className="flex flex-col items-center mb-5 lg:mb-0">
                     <User size={200} />
-                    <p>
-                        Charismatic, talent multiplying engineer & people leader<br />
-                        with over a decade of experience. Successfully led<br />
-                        enterprise projects reducing charge-offs by $10 million<br /> 
-                        & manual reporting by 30 hours per month.<br />
-                        Spearheaded design, implementation, and delivery of<br />
-                        scalable, highly available, event driven microservices,<br />
-                        critical data marts, and rich user interfaces &<br />
-                        experiences. Sold technical background, owning<br /> 
-                        individual contributor duties while managing tens of<br />
-                        remote engineers throughout the U.S. & Brazil.<br /> 
-                        Consistently collaborated with product/business<br />
-                        partners to develop roadmaps & provide budget<br />
-                        estimates.
+                    <p className='lg:max-w-md'>
+                        Charismatic, talent multiplying engineer & people leader with over a decade of experience.
+                        Successfully led enterprise projects reducing charge-offs by $10 million & manual reporting by 30 hours 
+                        per month. Spearheaded design, implementation, and delivery of scalable, highly available, event driven 
+                        microservices, critical data marts, and rich user interfaces & experiences. Sold technical background, 
+                        owning individual contributor duties while managing tens of remote engineers throughout the U.S. & Brazil.
+                        Consistently collaborated with product/business partners to develop roadmaps & provide budget estimates.
                     </p>
                 </div>
                 {getSeparatorComponents()}
