@@ -10,11 +10,6 @@ import Image from 'next/image';
 import React, { JSX } from "react";
 import SectionContainer from "./section-container";
 
-interface AccordionItem {
-    name: string;
-    imageSrc: string;
-};
-
 const NUM_SEPARATOR_COMPONENTS:number = 3;
 
 const getSeparatorComponents = ():JSX.Element[] => {
@@ -26,7 +21,7 @@ const getSeparatorComponents = ():JSX.Element[] => {
 };
 
 const getAccordionComponent = ():JSX.Element => {
-    const accordionItems:AccordionItem[] = [
+    const accordionItems = [
         { name: 'Backend', imageSrc: backendCoreCompetencies },
         { name: 'Front-End', imageSrc: frontEndCoreCompetencies },
         { name: 'Data', imageSrc: dataCoreCompetencies },
