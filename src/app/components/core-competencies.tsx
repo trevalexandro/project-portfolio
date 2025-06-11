@@ -1,7 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
 import { User } from "lucide-react";
-import backendCoreCompetencies from '@/../public/Backend Core Compentencies Icons.svg';
 import frontEndCoreCompetencies from '@/../public/Front-End Core Competencies Icons.svg';
 import dataCoreCompetencies from '@/../public/Data Core Compentencies Icons.svg';
 import cloudContainerInfraCoreCompetencies from '@/../public/Cloud_Container Infrastructure Core Compentencies Icons.svg';
