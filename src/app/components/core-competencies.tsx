@@ -1,7 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
 import { User } from "lucide-react";
-import backendCoreCompetencies from '@/../public/Backend Core Compentencies Icons.svg';
 import frontEndCoreCompetencies from '@/../public/Front-End Core Competencies Icons.svg';
 import dataCoreCompetencies from '@/../public/Data Core Compentencies Icons.svg';
 import cloudContainerInfraCoreCompetencies from '@/../public/Cloud_Container Infrastructure Core Compentencies Icons.svg';
@@ -22,7 +21,7 @@ const getSeparatorComponents = ():JSX.Element[] => {
 
 const getAccordionComponent = ():JSX.Element => {
     const accordionItems = [
-        { name: 'Backend', imageSrc: backendCoreCompetencies },
+        { name: 'Backend', imageSrc: '/Backend Core Compentencies Icons.svg' },
         { name: 'Front-End', imageSrc: frontEndCoreCompetencies },
         { name: 'Data', imageSrc: dataCoreCompetencies },
         { name: 'Cloud/Container Infrastructure', imageSrc: cloudContainerInfraCoreCompetencies },
@@ -38,7 +37,7 @@ const getAccordionComponent = ():JSX.Element => {
                         <AccordionItem value={accordionItem.name} key={accordionItem.name}>
                             <AccordionContent className='flex flex-col items-center'>
                                 <p className="self-center mb-3">{accordionItem.name}</p>
-                                <Image src={accordionItem.imageSrc} alt={accordionItem.name} />
+                                <Image width={328} height={110} src={accordionItem.imageSrc} alt={accordionItem.name} />
                             </AccordionContent>
                         </AccordionItem>
                     );
