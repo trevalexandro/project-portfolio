@@ -1,11 +1,11 @@
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
 import { User } from "lucide-react";
-import backendCoreCompetencies from './../../../public/Backend Core Compentencies Icons.drawio.png';
-import frontEndCoreCompetencies from './../../../public/Front-End Core Compentencies Icons.drawio.png';
-import dataCoreCompetencies from './../../../public/Data Core Compentencies Icons.drawio.png';
-import cloudContainerInfraCoreCompetencies from './../../../public/Cloud_Container Infrastructure Core Compentencies Icons.drawio.png';
-import otherCoreCompetencies from './../../../public/Other Core Compentencies Icons.drawio.png';
+import backendCoreCompetencies from '@/../public/Backend Core Compentencies Icons.svg';
+import frontEndCoreCompetencies from '@/../public/Front-End Core Competencies Icons.svg';
+import dataCoreCompetencies from '@/../public/Data Core Compentencies Icons.svg';
+import cloudContainerInfraCoreCompetencies from '@/../public/Cloud_Container Infrastructure Core Compentencies Icons.svg';
+import otherCoreCompetencies from '@/../public/Other Core Compentencies Icons.svg';
 import Image from 'next/image';
 import React, { JSX } from "react";
 import SectionContainer from "./section-container";
@@ -36,7 +36,7 @@ const getAccordionComponent = ():JSX.Element => {
                 accordionItems.map(accordionItem => {
                     return (
                         <AccordionItem value={accordionItem.name} key={accordionItem.name}>
-                            <AccordionContent className='flex flex-col'>
+                            <AccordionContent className='flex flex-col items-center'>
                                 <p className="self-center mb-3">{accordionItem.name}</p>
                                 <Image src={accordionItem.imageSrc} alt={accordionItem.name} />
                             </AccordionContent>

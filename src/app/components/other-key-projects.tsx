@@ -2,8 +2,21 @@ import { JSX } from "react";
 import SectionContainer from "./section-container";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
+interface KeyProject {
+    project: string;
+    role: string;
+    businessCase: string;
+    technologiesUsed: string;
+};
+
 const getTableRows = ():JSX.Element[] => {
-    const tableRows = [
+    const tableRows:KeyProject[] = [
+        {
+            project: 'Florida FloodHub',
+            role: 'Senior Software Engineer',
+            businessCase: 'Create a rich UI/UX for the Florida FloodHub organization',
+            technologiesUsed: 'Next.js, React, Tailwind, Tanstack Query, Railway, Directus'
+        },
         { 
             project: 'Risk 360',
             role: 'Engineering Manager',
