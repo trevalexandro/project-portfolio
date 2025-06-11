@@ -1,13 +1,14 @@
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
 import { User } from "lucide-react";
-import frontEndCoreCompetencies from '@/../public/Front-End Core Competencies Icons.svg';
-import dataCoreCompetencies from '@/../public/Data Core Compentencies Icons.svg';
-import cloudContainerInfraCoreCompetencies from '@/../public/Cloud_Container Infrastructure Core Compentencies Icons.svg';
-import otherCoreCompetencies from '@/../public/Other Core Compentencies Icons.svg';
 import Image from 'next/image';
 import React, { JSX } from "react";
 import SectionContainer from "./section-container";
+
+interface AccordionItem {
+    name: string;
+    imageSrc: string;
+};
 
 const NUM_SEPARATOR_COMPONENTS:number = 3;
 
@@ -20,12 +21,12 @@ const getSeparatorComponents = ():JSX.Element[] => {
 };
 
 const getAccordionComponent = ():JSX.Element => {
-    const accordionItems = [
+    const accordionItems:AccordionItem[] = [
         { name: 'Backend', imageSrc: '/Backend Core Compentencies Icons.svg' },
-        { name: 'Front-End', imageSrc: frontEndCoreCompetencies },
-        { name: 'Data', imageSrc: dataCoreCompetencies },
-        { name: 'Cloud/Container Infrastructure', imageSrc: cloudContainerInfraCoreCompetencies },
-        { name: 'Other Technologies', imageSrc: otherCoreCompetencies }
+        { name: 'Front-End', imageSrc: '/Front-End Core Competencies Icons.svg' },
+        { name: 'Data', imageSrc: '/Data Core Compentencies Icons.svg' },
+        { name: 'Cloud/Container Infrastructure', imageSrc: '/Cloud_Container Infrastructure Core Compentencies Icons.svg' },
+        { name: 'Other Technologies', imageSrc: '/Other Core Compentencies Icons.svg' }
     ];
 
     return (
