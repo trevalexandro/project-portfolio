@@ -1,13 +1,8 @@
 import { JSX } from "react";
 import SectionContainer from "./section-container";
 import Image from 'next/image';
-import lightDiagram from './../../../public/Portfolio Management-light.drawio.png';
-import darkDiagram from './../../../public/Portfolio Management-dark.drawio.png';
-import { useTheme } from "next-themes";
 
 const NotableProjectSection = ():JSX.Element => {
-    const { theme } = useTheme();
-
     return (
         <SectionContainer sectionName="Notable Project: Portfolio Management">
             <p className='self-center'>
@@ -22,7 +17,13 @@ const NotableProjectSection = ():JSX.Element => {
                 project reduced over $10 million in charge-offs within a year.
             `}
             </p>
-            <Image className='self-center' src={theme === 'dark' ? darkDiagram : lightDiagram} alt='Portfolio Management Architecture' />
+            <Image 
+                width={891} 
+                height={529} 
+                className='self-center' 
+                src='/Portfolio Management.svg' 
+                alt='Portfolio Management Architecture' 
+            />
         </SectionContainer>
     );
 };
