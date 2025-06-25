@@ -13,7 +13,7 @@ const getTableRows = ():JSX.Element[] => {
     const tableRows:KeyProject[] = [
         {
             project: 'Florida FloodHub',
-            role: 'Senior Software Engineer',
+            role: 'Senior Consultant',
             businessCase: 'Create a rich UI/UX for the Florida FloodHub organization',
             technologiesUsed: 'Next.js, React, Tailwind, Tanstack Query, Railway, Directus'
         },
