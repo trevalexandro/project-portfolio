@@ -12,6 +12,12 @@ interface KeyProject {
 const getTableRows = ():JSX.Element[] => {
     const tableRows:KeyProject[] = [
         {
+            project: 'DEWM',
+            role: 'Senior Consultant',
+            businessCase: 'Rewrite of the UI for the DEWM organization to consolidate codebases',
+            technologiesUsed: 'Next.js, React, Tailwind, Tanstack Query, Django, Flask, MySQL, Docker, Azure'
+        },
+        {
             project: 'Florida FloodHub',
             role: 'Senior Consultant',
             businessCase: 'Create a rich UI/UX for the Florida FloodHub organization',
