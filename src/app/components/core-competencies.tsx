@@ -60,9 +60,10 @@ const CoreCompetenciesSection = ():JSX.Element => {
                         Charismatic, talent multiplying engineer & people leader with over a decade of experience.
                         Successfully led enterprise projects reducing charge-offs by $10 million & manual reporting by 30 hours 
                         per month. Spearheaded design, implementation, and delivery of scalable, highly available, event driven 
-                        microservices, critical data marts, and rich user interfaces & experiences. Sold technical background, 
-                        owning individual contributor duties while managing tens of remote engineers throughout the U.S. & Brazil.
-                        Consistently collaborated with product/business partners to develop roadmaps & provide budget estimates.
+                        microservices, critical data marts, and rich user interfaces & experiences. Solid technical background, 
+                        owning individual contributor duties while managing tens of remote engineers throughout the U.S., 
+                        South America, and Brazil. Consistently collaborated with product/business partners to develop roadmaps & 
+                        provide budget estimates.
                     </p>
                 </div>
                 {getSeparatorComponents()}
